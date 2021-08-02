@@ -1,2 +1,2 @@
 # radtattoo
-tattoo shop
+Tattoo and Piercing Shop
