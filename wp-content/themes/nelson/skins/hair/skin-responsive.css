@@ -1,0 +1,268 @@
+/* Skin-specific responsive styles
+---------------------------------- */
+@media (max-width: 1439px) {
+  /* Theme Common styles */
+  .sc_layouts_row_type_compact .sc_layouts_title .sc_layouts_title_title .sc_layouts_title_caption, h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 3.5rem;
+  }
+
+  .sc_layouts_row_type_compact .sc_layouts_title .sc_layouts_title_title .sc_layouts_title_caption, h1 {
+    font-size: 4rem;
+  }
+
+  .woocommerce-page ul.products li.product .onsale,
+  .woocommerce ul.products li.product .onsale {
+    right: -1.5em;
+  }
+
+  /* Booked */
+  .booked-custom .booked_shortcode_custom_wrap {
+    max-height: 327px;
+  }
+
+  body table.booked-calendar td .date .number {
+    width: auto !important;
+    height: auto !important;
+  }
+
+  .woocommerce #review_form #respond p {
+    font-size: 16px;
+  }
+
+  .woocommerce .shop_mode_list ul.products li.product .outofstock_label,
+  .woocommerce-page .shop_mode_list ul.products li.product .onsale, .woocommerce .shop_mode_list ul.products li.product .onsale {
+    right: 10px !important;
+    top: 10px !important;
+  }
+}
+@media (max-width: 1279px) {
+  .sc_services.sc_services_default .sc_services_item.with_icon .sc_services_item_info .sc_services_item_title {
+    font-size: 2rem;
+  }
+
+  .woocommerce ul.products li.product .outofstock_label {
+    top: 0;
+  }
+
+  /* Booked */
+  .booked-custom .booked_shortcode_custom_wrap {
+    max-height: 407px;
+  }
+
+  .woocommerce div.product form.cart div.quantity span,
+  .woocommerce-page div.product form.cart div.quantity span,
+  .woocommerce .shop_table.cart div.quantity span,
+  .woocommerce-page .shop_table.cart div.quantity span {
+    line-height: 2.7em;
+    width: 3.4em;
+  }
+
+  .woocommerce.widget_shopping_cart .total,
+  .woocommerce .widget_shopping_cart .total,
+  .woocommerce-page.widget_shopping_cart .total,
+  .woocommerce-page .widget_shopping_cart .total {
+    font-size: 1.1rem;
+  }
+
+  .woocommerce .related ul.products li.product .onsale,
+  .woocommerce .related ul.products li.product .outofstock_label {
+    right: 0.5rem !important;
+  }
+}
+@media (max-width: 1023px) {
+  .sc_layouts_row_type_compact .sc_layouts_title .sc_layouts_title_title .sc_layouts_title_caption, h1 {
+    font-size: 3.5rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 2.75rem;
+  }
+
+  .post_layout_classic .post_title {
+    font-size: 1.75em;
+  }
+
+  .sc_price_item .sc_price_item_info .sc_price_item_title {
+    font-size: 1.5rem;
+  }
+
+  /* Booked */
+  .booked-custom .booked_shortcode_custom_wrap {
+    max-height: 317px;
+  }
+
+  .booked-custom h4.sc_item_title {
+    font-size: 1.65rem;
+  }
+
+  /* Woocommerce */
+  .single-product .related > h2 {
+    font-size: 3rem;
+  }
+
+  .woocommerce table.cart td, .woocommerce #content table.cart td, .woocommerce-page table.cart td, .woocommerce-page #content table.cart td {
+    padding: 10px;
+  }
+}
+@media (max-width: 767px) {
+  .sc_layouts_row_type_compact .sc_layouts_title .sc_layouts_title_title .sc_layouts_title_caption, h1 {
+    font-size: 3rem;
+  }
+
+  .sc_price_item .sc_price_item_info .sc_price_item_title {
+    font-size: 2rem;
+  }
+
+  /* Booked */
+  .booked-custom .booked_shortcode_custom_wrap {
+    max-height: 387px;
+  }
+
+  .booked-custom h4.sc_item_title {
+    font-size: 2.187rem;
+  }
+
+  /* WooCommerce */
+  .woocommerce ul.products li.product .woocommerce-loop-category__title,
+  .woocommerce ul.products li.product .woocommerce-loop-product__title,
+  .woocommerce ul.products li.product h3 {
+    font-size: 1.5em;
+  }
+
+  .woocommerce-page ul.products li.product .onsale,
+  .woocommerce ul.products li.product .onsale {
+    right: -0.2em;
+  }
+
+  .single-product .related > h2 {
+    font-size: 2.5rem;
+  }
+
+  [class*="sc_fly_mc"]:not(.sc_fly_static) {
+    position: absolute !important;
+    z-index: 1;
+    top: 50% !important;
+    left: 50% !important;
+    -webkit-transform: translate(-50%, -50%) !important;
+    transform: translate(-50%, -50%) !important;
+  }
+
+  .sc_layouts_cart_widget .sc_layouts_cart_widget_close {
+    right: 10px;
+    top: 0;
+  }
+
+  .admin-bar .sc_layouts_cart_widget {
+    top: 46px;
+  }
+
+  .sc_layouts_cart_widget {
+    top: 0;
+  }
+}
+@media (max-width: 479px) {
+  /* Theme Common styles */
+  .sc_layouts_row_type_compact .sc_layouts_title .sc_layouts_title_title .sc_layouts_title_caption, h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.6rem;
+  }
+
+  h4 {
+    font-size: 1.4rem;
+  }
+
+  h5 {
+    font-size: 1.3rem;
+  }
+
+  ul[class*="trx_addons_list_parameters"] li {
+    font-size: 1.25rem;
+  }
+
+  .sc_item_button .sc_button {
+    display: block;
+    text-align: center;
+  }
+
+  .sc_icons.sc_icons_modern .sc_icons_item .sc_icons_item_details .sc_icons_item_title {
+    font-size: 1.75rem;
+  }
+
+  .sc_layouts_cart_widget {
+    right: 0;
+  }
+
+  /* Woocommerce */
+  .woocommerce ul.products li.product .onsale,
+  .woocommerce-page ul.products li.product .onsale {
+    font-size: 12px;
+  }
+
+  .woocommerce .cart-collaterals .cart_totals table td,
+  .woocommerce-page .cart-collaterals .cart_totals table td,
+  .woocommerce .cart-collaterals .cart_totals table th,
+  .woocommerce-page .cart-collaterals .cart_totals table th {
+    padding: 5px;
+    font-size: 14px;
+  }
+
+  .woocommerce form .form-row .select2-container {
+    max-width: 220px;
+  }
+
+  /* Booked */
+  .booked-custom .booked_shortcode_custom_wrap {
+    max-height: 272px;
+  }
+
+  .booked-custom h4.sc_item_title {
+    font-size: 1.4rem;
+  }
+
+  .sc_item_descr.sc_align_center {
+    max-width: 81%;
+  }
+
+  .widget_search .search-field,
+  .woocommerce.widget_product_search .search_field,
+  .widget_display_search #bbp_search,
+  #bbpress-forums #bbp-search-form #bbp_search {
+    padding: 1.8em 1.2em;
+    padding-right: 2.5em !important;
+  }
+
+  .woocommerce div.product p.price, .woocommerce div.product span.price {
+    font-size: 2rem;
+  }
+
+  .woocommerce-page .shop_mode_list ul.products li.product .onsale, .woocommerce .shop_mode_list ul.products li.product .onsale {
+    font-size: 13px;
+    width: 3.8em;
+    height: 3.8em;
+    line-height: 3.8em;
+    padding: 0;
+  }
+}
+@media screen and (max-width: 800px) and (orientation: landscape), screen and (max-height: 300px) {
+  .mfp-img-mobile .mfp-close {
+    position: absolute;
+    margin: 10px 13px 0 0 !important;
+  }
+}
+
+/*# sourceMappingURL=skin-responsive.css.map */

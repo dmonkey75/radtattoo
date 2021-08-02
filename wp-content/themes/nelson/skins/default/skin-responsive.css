@@ -1,0 +1,99 @@
+/* Skin-specific responsive styles
+---------------------------------- */
+@media (max-width: 1439px) {
+  .woocommerce-page ul.products li.product .onsale,
+  .woocommerce ul.products li.product .onsale,
+  .woocommerce ul.products li.product .outofstock_label {
+    right: -1.5rem !important;
+  }
+
+  .woocommerce div.product form.cart div.quantity span,
+  .woocommerce-page div.product form.cart div.quantity span,
+  .woocommerce .shop_table.cart div.quantity span,
+  .woocommerce-page .shop_table.cart div.quantity span {
+    line-height: 2.7em;
+    width: 3.4em;
+  }
+
+  .woocommerce .shop_mode_list ul.products li.product .outofstock_label,
+  .woocommerce-page .shop_mode_list ul.products li.product .onsale, .woocommerce .shop_mode_list ul.products li.product .onsale {
+    right: 10px !important;
+  }
+}
+@media (max-width: 1279px) {
+  .woocommerce ul.products li.product .onsale,
+  .woocommerce ul.products li.product .outofstock_label {
+    right: -2em;
+    top: 0;
+  }
+
+  .woocommerce .related ul.products li.product .onsale,
+  .woocommerce .related ul.products li.product .outofstock_label {
+    right: 0.5rem !important;
+  }
+
+  .slider_alias_home-3 .nelson.tparrows,
+  .slider_alias_home-5 .nelson.tparrows {
+    margin-top: 5em !important;
+    margin-bottom: 0 !important;
+  }
+}
+@media (max-width: 1023px) {
+  .slider_alias_home-3 .nelson.tparrows,
+  .slider_alias_home-5 .nelson.tparrows {
+    margin-top: 6em !important;
+    margin-bottom: 0 !important;
+  }
+}
+@media (max-width: 767px) {
+  .woocommerce .related ul.products li.product .outofstock_label,
+  .woocommerce ul.products li.product .onsale,
+  .woocommerce ul.products li.product .outofstock_label {
+    right: 0 !important;
+    top: 0;
+  }
+
+  .sc_layouts_cart_widget .sc_layouts_cart_widget_close {
+    right: 10px;
+    top: 0;
+  }
+
+  .admin-bar .sc_layouts_cart_widget {
+    top: 46px;
+  }
+
+  .sc_layouts_cart_widget {
+    top: 0;
+  }
+
+  .sc_layouts_row_type_compact .sc_layouts_cart .sc_layouts_cart_items_short {
+    text-indent: 1px;
+  }
+  .ua_gecko .sc_layouts_row_type_compact .sc_layouts_cart .sc_layouts_cart_items_short {
+    line-height: 17px;
+  }
+}
+@media (max-width: 479px) {
+  .woocommerce ul.products li.product .onsale,
+  .woocommerce ul.products li.product .outofstock_label {
+    padding: 13px 3px;
+    width: 5em;
+    height: 5em;
+  }
+
+  .woocommerce-page .shop_mode_list ul.products li.product .onsale, .woocommerce .shop_mode_list ul.products li.product .onsale {
+    font-size: 13px;
+    width: 3.8em;
+    height: 3.8em;
+    line-height: 3.8em;
+    padding: 0;
+  }
+}
+@media screen and (max-width: 800px) and (orientation: landscape), screen and (max-height: 300px) {
+  .mfp-img-mobile .mfp-close {
+    position: absolute;
+    margin: 10px 13px 0 0 !important;
+  }
+}
+
+/*# sourceMappingURL=skin-responsive.css.map */

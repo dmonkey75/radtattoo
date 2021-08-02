@@ -1,0 +1,18 @@
+@import "../../css/_mixins.scss";
+@import "../../css/_theme-vars.scss";
+
+//@mixin blog_styles_portfolio--xl() {
+@media #{$media_xl} {
+	/* Blog layout: Portfolio */
+}
+
+@media #{ $media_md } {
+  .blog_style_portfolio_4 .nav-links,
+  .blog_style_portfolio_3 .nav-links,
+  .blog_style_portfolio_2 .nav-links {
+    margin-top: 1em;
+  }
+  .page_content_wrap {
+
+  }
+}

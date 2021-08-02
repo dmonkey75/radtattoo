@@ -1,0 +1,120 @@
+@charset "UTF-8";
+/* Skin-specific styles
+----------------------- */
+.widget_calendar td#prev a:before,
+.widget_calendar td#next a:before,
+.wp-block-calendar td#prev a:before,
+.wp-block-calendar td#next a:before,
+.widget_calendar .wp-calendar-nav-prev a:before,
+.widget_calendar .wp-calendar-nav-next a:before,
+.wp-block-calendar .wp-calendar-nav-prev a:before,
+.wp-block-calendar .wp-calendar-nav-next a:before {
+  line-height: 1.1em !important;
+}
+
+.wp-block-search .wp-block-search__input,
+.wp-block-search .wp-block-search__button {
+  border-width: 5px;
+}
+
+figure figcaption,
+.wp-block-image figcaption,
+.wp-block-gallery .blocks-gallery-image figcaption,
+.wp-block-gallery .blocks-gallery-item figcaption,
+.wp-caption .wp-caption-text,
+.wp-caption .wp-caption-dd,
+.wp-caption-overlay .wp-caption .wp-caption-text,
+.wp-caption-overlay .wp-caption .wp-caption-dd {
+  overflow-y: auto;
+}
+
+.comment-form-cookies-consent label {
+  padding-left: 2.2em !important;
+}
+
+.comment-form-cookies-consent label::before {
+  position: absolute !important;
+}
+
+.sc_button.sc_button_simple:after {
+  top: 0;
+}
+
+.sc_blogger_item_price {
+  font-size: 1.56rem;
+  line-height: 1.02em;
+  font-weight: 500 !important;
+  margin-bottom: 0 !important;
+}
+
+.mejs-container .mejs-inner .mejs-controls .mejs-time {
+  padding-top: 7px;
+}
+
+.post_featured.hover_icon .icons a, .post_featured.hover_icons .icons a {
+  line-height: 4.3rem;
+}
+
+.comment-form-cookies-consent label {
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.woocommerce ul.products li.product .outofstock_label {
+  padding: 18px 10px;
+}
+
+/* WooCommerce */
+.woocommerce ul.products li.product .outofstock_label {
+  right: -3rem;
+}
+
+.woocommerce-page ul.products li.product .onsale,
+.woocommerce ul.products li.product .onsale {
+  right: -3rem;
+}
+
+.woocommerce .shop_table.cart div.quantity .q_dec,
+.woocommerce .shop_table.cart div.quantity .q_inc,
+.woocommerce-page .shop_table.cart div.quantity .q_dec,
+.woocommerce-page .shop_table.cart div.quantity .q_inc {
+  right: 12px;
+}
+
+.woocommerce .related ul.products li.product .outofstock_label {
+  right: -1.5rem;
+}
+
+.woocommerce ul.products li.product .outofstock_label {
+  font-weight: 700;
+}
+
+ul[class*="trx_addons_list_dot"] > li::before {
+  content: "" !important;
+}
+
+.woocommerce ul.order_details li {
+  font-size: 1em;
+}
+
+ul.order_details {
+  padding-left: 0;
+}
+
+.woocommerce.widget_shopping_cart .total strong {
+  font-weight: 400 !important;
+}
+
+#modal .vs__search, #modal .vs__search:focus {
+  width: 0;
+}
+
+.woocommerce-page #elegro-reset-wrapper .elegro-widget__button, .woocommerce #elegro-reset-wrapper .elegro-widget__button {
+  line-height: 20px;
+}
+
+.esg-grid .esg-pagination {
+  background-color: transparent;
+}
+
+/*# sourceMappingURL=skin.css.map */

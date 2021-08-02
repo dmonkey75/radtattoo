@@ -1,0 +1,8 @@
+@media (max-width: 479px) {
+  /* Single post header */
+  .single_style_in-below .post_header_wrap {
+    margin-bottom: 2em;
+  }
+}
+
+/*# sourceMappingURL=in-below-responsive.css.map */

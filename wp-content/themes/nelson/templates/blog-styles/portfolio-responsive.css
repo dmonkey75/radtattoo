@@ -1,0 +1,12 @@
+@media (max-width: 1439px) {
+  /* Blog layout: Portfolio */
+}
+@media (max-width: 1023px) {
+  .blog_style_portfolio_4 .nav-links,
+  .blog_style_portfolio_3 .nav-links,
+  .blog_style_portfolio_2 .nav-links {
+    margin-top: 1em;
+  }
+}
+
+/*# sourceMappingURL=portfolio-responsive.css.map */

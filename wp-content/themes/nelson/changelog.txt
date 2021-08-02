@@ -1,0 +1,56 @@
+Version 1.3.0
+     Added:
+        - New Home Page (Beuaty Salon)	
+        - New Simple Gallery Page
+	- PHP 8.0 compatibility
+        - Compatibility with WordPress 5.8
+    Fixed:
+        - Update plugins to their latest versions
+    Changed:
+        - Update demo data
+
+Version 1.2.1
+    Added:
+        - WP 5.6 compatibility
+        - PHP 7.4 compatibility
+
+    Fixed:
+        - Update plugins to their latest versions
+
+    Changed:
+        - Update demo data
+
+
+Version 1.2.0
+    Added:
+        - Compatibility with elegro Crypto Payment plugin
+        - Compatibility with Date & Time Field plugin
+        - Hair Salon skin
+
+    Changed:
+        - Update demo data
+
+    Fixed:
+        - Improve compatibility with WP 5.4.1
+        - Update plugins to their latest versions
+
+    Removed:
+        - Contact Form 7 Datepicker plugin
+
+
+Version 1.1.1
+    Themerex Addons vulnarability fixed
+
+
+Version 1.1.0
+    Added:
+        - New Home Page (Parallax)
+        - Compatibility with WordPress 5.3
+    Fixed:
+        - Update plugins to latest version
+
+
+
+Version(1.0.0)(1.0.65)
+
+Plugin TRX Addons has not been edited

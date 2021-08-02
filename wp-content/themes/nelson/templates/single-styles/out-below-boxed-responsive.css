@@ -1,0 +1,14 @@
+@media (max-width: 1023px) {
+  /* Single post header */
+  .single_style_out-below-boxed .post_header_wrap {
+    margin-bottom: 3em;
+  }
+}
+@media (max-width: 479px) {
+  /* Single post header */
+  .single_style_out-below-boxed .post_header_wrap {
+    margin-bottom: 2em;
+  }
+}
+
+/*# sourceMappingURL=out-below-boxed-responsive.css.map */

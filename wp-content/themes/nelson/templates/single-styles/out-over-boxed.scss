@@ -1,0 +1,62 @@
+@import "../../css/_mixins.scss";
+@import "../../css/_theme-vars.scss";
+
+.single_style_out-over-boxed .post_header_wrap {
+	margin-bottom: 4em;
+}
+.single_style_out-over-boxed .post_header_wrap > .content_wrap,
+.single_style_out-over-boxed .content .post_header_wrap {
+	position: relative;
+}
+.single_style_out-over-boxed .post_header_wrap + .content_wrap {
+	padding-top: 0;
+}
+.single_style_out-over-boxed .post_header_wrap .post_featured {
+	margin: 0;
+}
+
+.single_style_out-over-boxed .post_header_wrap.with_featured_image > .content_wrap:before,
+.single_style_out-over-boxed .content .post_header_wrap.with_featured_image:before {
+	content: ' ';
+	display: block;
+	@include abs-cover;
+	background-color: rgba(0,0,0,0.3);
+}
+.single_style_out-over-boxed .post_header_wrap.with_featured_image .post_header *,
+.single_style_out-over-boxed .post_header_wrap.with_featured_image .post_header .post_meta_item {
+	color: #fff;
+}
+.single_style_out-over-boxed .post_header_wrap.with_featured_image .post_header a:hover *,
+.single_style_out-over-boxed .post_header_wrap.with_featured_image .post_header a:focus * {
+	color: inherit;
+	@include transition-property(color);
+}
+
+.single_style_out-over-boxed .post_header_wrap .post_header {
+	display: block;
+}
+.single_style_out-over-boxed .post_header_wrap .post_featured + .post_header {
+	display: inline-block;
+	@include abs-cb;
+	max-width: 50%;
+	box-sizing: border-box;
+	text-align: center;
+	margin-bottom: 2em;
+}
+.single_style_out-over-boxed .post_header_wrap .post_header .post_title {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.single_style_out-over-boxed .post_header_wrap .post_header .post_title + .post_meta {
+	margin-top: 0.5em;
+}
+.single_style_out-over-boxed .post_header_wrap .post_header .post_meta_categories {
+    margin-top: 0;
+	margin-bottom: 0.5em;
+}
+.single_style_out-over-boxed .post_header_wrap .post_header .post_meta_other {
+	margin-top: 1em;
+}
+.single_style_out-over-boxed .post_header_wrap .post_header .post_subtitle {
+	margin-top: 0.1em;
+}
