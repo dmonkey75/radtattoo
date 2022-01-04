@@ -944,7 +944,7 @@ if ( ! class_exists( 'SettingsAPI' ) ) :
 		public function top_bar(){
 			return '<div class="plugin-page-header d-flex align-items-center justify-content-between">
 				<div class="plugin-page-left">
-					<p>Date and Time Picker by Input WP <small>v2.0</small></p>
+					<p>Date and Time Picker by Input WP <small>v2.1</small></p>
 				</div>
 				<div class="plugin-page-right">
 					<ul>

@@ -1,3 +1,6 @@
+Version 1.9.2:
+	+ Save and restore theme skins data are improved.
+
 Version 1.9.1:
 	+ Hooks before and after upgrade process are added.
 

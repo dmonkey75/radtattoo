@@ -392,32 +392,30 @@ class Engine extends Base {
 		// Backup skins
 		$skins_dir     = $theme_dir . '/skins/';
 		$skins_json    = $skins_dir . 'skins.json';
-		$skins_options = $skins_dir . 'skins-options.php';
 		if ( file_exists( $skins_json ) ) {
-			if ( file_exists( $skins_options ) ) {
-				require_once $skins_options;
-			}
-			$skins_info = json_decode( trx_updater_fgc( $skins_json ), true );
-			$skins_list = glob( $skins_dir . '*', GLOB_ONLYDIR);
-			if ( is_array( $skins_list ) ) {
-				$this->theme_parts['skins'] = array();
-				trx_updater_allow_upload_archives();
-				foreach( $skins_list as $sdir ) {
-					$sname = basename( $sdir );
-					$rnd = str_replace('.', '', mt_rand());
-					$result = wp_upload_bits( "backup-{$this->theme_slug}-skin-{$sname}-{$rnd}.zip", 0, '' );
-					if ( ! empty( $result['file'] ) ) {
-						if ( trx_updater_pack_archive( $result['file'], $sdir ) ) {
-							$this->theme_parts['skins'][$sname] = array(
-								'backup'  => $result['file'],
-								'info'    => isset( $skins_info[$sname] ) ? $skins_info[$sname] : '',
-								'options' => isset( $skins_options[$sname]['options'] ) ? $skins_options[$sname]['options'] : '',
-							);
-						}
+			$this->theme_parts['skins-json'] = trx_updater_fgc( $skins_json );
+		}
+		$skins_options = $skins_dir . 'skins-options.php';
+		if ( file_exists( $skins_options ) ) {
+			$this->theme_parts['skins-options'] = trx_updater_fgc( $skins_options );
+		}
+		$skins_list = glob( $skins_dir . '*', GLOB_ONLYDIR);
+		if ( is_array( $skins_list ) ) {
+			$this->theme_parts['skins'] = array();
+			trx_updater_allow_upload_archives();
+			foreach( $skins_list as $sdir ) {
+				$sname = basename( $sdir );
+				$rnd = str_replace('.', '', mt_rand());
+				$result = wp_upload_bits( "backup-{$this->theme_slug}-skin-{$sname}-{$rnd}.zip", 0, '' );
+				if ( ! empty( $result['file'] ) ) {
+					if ( trx_updater_pack_archive( $result['file'], $sdir ) ) {
+						$this->theme_parts['skins'][$sname] = array(
+							'backup'  => $result['file'],
+						);
 					}
 				}
-				trx_updater_disallow_upload_archives();
 			}
+			trx_updater_disallow_upload_archives();
 		}
 		// Backup plugins list
 		$plugins_dir  = $theme_dir . '/plugins/';
@@ -519,39 +517,24 @@ class Engine extends Base {
 		// Restore saved skins
 		if ( ! empty( $this->theme_parts['skins'] ) && is_array( $this->theme_parts['skins'] ) ) {
 			$skins_dir     = $theme_dir . '/skins/';
-			$skins_json    = $skins_dir . 'skins.json';
-			$skins_options = $skins_dir . 'skins-options.php';
 			if ( is_dir( $skins_dir ) ) {
-				$skins_info           = array();
-				$skins_options_output = '<?php'
-										. "\n//" . esc_html__( 'Skins', 'basekit' )
-										. "\n\$skins_options = array(";
-				$counter = 0;
+				// Restore skins.json
+				if ( ! empty( $this->theme_parts['skins-json'] ) ) {
+					trx_updater_fpc( $skins_dir . 'skins.json', $this->theme_parts['skins-json'] );
+				}
+				// Restore skins-options.php
+				if ( ! empty( $this->theme_parts['skins-options'] ) ) {
+					trx_updater_fpc( $skins_dir . 'skins-options.php', $this->theme_parts['skins-options'] );
+				}
+				// Restore skins
 				foreach( $this->theme_parts['skins'] as $skin_name => $skin_data ) {
 					$sdir = $skins_dir . trx_updater_esc( $skin_name );
 					if ( ! empty( $skin_data['backup'] ) && file_exists( $skin_data['backup'] ) ) {
 						if ( mkdir( $sdir ) && is_dir( $sdir ) ) {
 							unzip_file( $skin_data['backup'], $sdir );
-							if ( isset( $skin_data['info'] ) ) {
-								$skins_info[$skin_name] = $skin_data['info'];
-							}
-							if ( isset( $skin_data['options'] ) ) {
-								$skins_options_output .= ( $counter++ ? ',' : '' )
-															. "\n\t'{$skin_name}' => array("
-																. "\n\t\t'options' => " . '"' . str_replace( array( "\r", "\n" ), array( '\r', '\n' ), addslashes( $skin_data['options'] ) ) . '"'
-															. "\n\t)";
-							}
 						}
 						unlink( $skin_data['backup'] );
 					}
-				}
-				// Save skins.json
-				trx_updater_fpc( $skins_json, json_encode( $skins_info, JSON_PRETTY_PRINT | JSON_FORCE_OBJECT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_LINE_TERMINATORS ) );
-				// Save skis-options.php
-				if ( $counter > 0 ) {
-					$skins_options_output .= "\n);"
-										. "\n?>";
-					trx_updater_fpc( $skins_options, $skins_options_output );
 				}
 			}
 		}

@@ -4,7 +4,7 @@
  * Description: Allow updates theme-specific plugins and theme core
  * Plugin URI: https://themerex.net/?utm_source=wp-plugins&utm_campaign=plugin-uri&utm_medium=wp-dash
  * Author: ThemeREX
- * Version: 1.9.1
+ * Version: 1.9.2
  * Author URI: https://themerex.net/?utm_source=trx_updater&utm_campaign=author-uri&utm_medium=wp-dash
  *
  * Text Domain: trx-updater
@@ -27,7 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-define( 'TRX_UPDATER_VERSION', '1.9.1' );
+define( 'TRX_UPDATER_VERSION', '1.9.2' );
 
 define( 'TRX_UPDATER_FILE', __FILE__ );
 define( 'TRX_UPDATER_BASE', plugin_basename( TRX_UPDATER_FILE ) );

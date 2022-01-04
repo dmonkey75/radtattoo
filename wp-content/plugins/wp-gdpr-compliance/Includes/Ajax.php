@@ -10,6 +10,9 @@ class Ajax {
     /** @var null */
     private static $instance = null;
 
+    /**
+     * Handle settings ajax call
+     */
     public function processSettings() {
         check_ajax_referer('wpgdprc', 'security');
 
@@ -78,6 +81,9 @@ class Ajax {
         die();
     }
 
+    /**
+     * Handle relevant action.
+     */
     public function processAction() {
         check_ajax_referer('wpgdprc', 'security');
 
@@ -269,6 +275,9 @@ class Ajax {
         die();
     }
 
+    /**
+     * Process the deletion request.
+     */
     public function processDeleteRequest() {
         check_ajax_referer('wpgdprc', 'security');
 

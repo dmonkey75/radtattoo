@@ -36,6 +36,9 @@ class User {
         }
     }
 
+    /**
+     * Get the needed data.
+     */
     public function load() {
         global $wpdb;
         $query = "SELECT * FROM `" . $wpdb->users . "` WHERE `ID` = %d";

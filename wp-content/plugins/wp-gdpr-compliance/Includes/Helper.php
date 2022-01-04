@@ -20,6 +20,15 @@ class Helper {
     }
 
     /**
+     * @return bool
+     */
+    public static function isPremiumModeActive() {
+        $optionNameEnablePremiumMode = WP_GDPR_C_PREFIX . '_settings_enable_premium_mode';
+        $premiumModeEnabled = get_option($optionNameEnablePremiumMode, false);
+        return !empty($premiumModeEnabled);
+    }
+
+    /**
      * @param string $type
      * @param array $additionalArgs
      * @return string
@@ -654,6 +663,9 @@ class Helper {
         return $output;
     }
 
+    /**
+     * Create the data request tables is needed.
+     */
     public static function createUserRequestDataTables() {
         global $wpdb;
         require_once(ABSPATH . 'wp-admin/includes/upgrade.php');

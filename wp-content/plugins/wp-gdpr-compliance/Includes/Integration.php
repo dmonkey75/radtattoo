@@ -83,6 +83,9 @@ class Integration {
         }
     }
 
+    /**
+     * Register the integraion settings.
+     */
     public function registerSettings() {
         foreach (self::getSupportedIntegrations() as $plugin) {
             register_setting(WP_GDPR_C_SLUG . '_integrations', WP_GDPR_C_PREFIX . '_integrations_' . $plugin['id'], 'intval');

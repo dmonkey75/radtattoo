@@ -1,18 +1,18 @@
-=== Date Picker by Input WP - Sync your bookings with external Calendars (.ics) ===
+=== Date Picker by Input WP - Sync bookings with external Calendars (.ics) ===
 Contributors: inputwp, nirjhar_lo
 Donate link: https://www.inputwp.com
 Tags: datepicker, booking, calendar, date picker, jquery ui
 Requires at least: 5.0
-Tested up to: 5.7.2
+Tested up to: 5.8
 Requires PHP: 5.6.2
-Stable tag: 2.0
+Stable tag: 2.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 The **Date Picker by Input WP** plugin allows you to convert manually or automatically a text input field into an advanced Date Picker. It works perfectly with Contact Form 7, Divi, Gravity Forms, Ninja Forms. Sync automatically external calendars (through .ics URL) to disable dates and times.
 
 == Description ==
-**Date and Time Picker** by [InputWP](https://www.inputwp.com/) is a plugin that allows you to convert text fields into a **Date Picker**, **Time Picker**, **Date and Time Picker** or a **Date Range Picker**, using a **CSS Selector**. Define advanced rules for the dates and times available or disable the ones that are not needed.
+**Date and Time Picker** by [InputWP](https://www.inputwp.com/) is a plugin that allows you to convert text fields into a **Date Picker**, **Time Picker**, **Date and Time Picker** or a **Date Range Picker**, using a **CSS Selector**. It works with Contact Form 7, Divi, Ninja Forms and Gravity Forms. Define advanced rules for the dates and times available or disable the ones that are not needed.
 
 = Works well with Contact Form 7 and Divi =
 
@@ -114,6 +114,12 @@ When you install the PRO plugin, it will automatically import your input created
 4. Integration
 
 == Changelog ==
+
+= v2.1 - August 13, 2021 =
+- Fix: Divi Integration.
+- Fix: Contact Form 7 Missing dependencies.
+- Fix: Dropdown not showing on Modal.
+- Tested: Compatibility with WordPress 5.8.
 
 = v2.0 - July 16, 2021 =
 - Enhancement: Option to select the date picker type.

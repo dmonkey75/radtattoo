@@ -8,7 +8,14 @@ jQuery(document)
 	});
 
 function dtp_init() {
-	var dtselector = jQuery(datepickeropts.selector);
+	var dtselector = null;
+	if(datepickeropts.selector.charAt(0) != '#' && datepickeropts.selector.charAt(0) != '.'){
+		var diviID = datepickeropts.selector.split(',')[0]
+		dtselector = jQuery('input[data-original_id='+ diviID +']')
+		console.log(dtselector)
+	}else{
+		dtselector = jQuery(datepickeropts.selector);
+	}
 	if (dtselector.length === 0) {
 		return;
 	}
@@ -16,9 +23,10 @@ function dtp_init() {
 	jQuery.datetimepicker.setDateFormatter("moment");
 
 	if (datepickeropts.preventkeyboard == "on") {
-		jQuery(datepickeropts.selector).focus(function () {
+		jQuery(dtselector).focus(function () {
 			jQuery(this).blur();
 		});
+		jQuery(dtselector).attr("readonly", "readonly");
 	}
 
 	// convert to integer
@@ -251,8 +259,7 @@ function dtp_init() {
 		opts.allowTimes = datepickeropts.allowed_times;
 	}
 
-	console.log(opts);
-	jQuery(datepickeropts.selector)
+	jQuery(dtselector)
 		.datetimepicker(opts)
 		.attr("type", "text");
 	jQuery.datetimepicker.setLocale(datepickeropts.locale);

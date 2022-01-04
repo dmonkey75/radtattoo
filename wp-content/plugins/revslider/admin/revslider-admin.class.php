@@ -2281,7 +2281,8 @@ class RevSliderAdmin extends RevSliderFunctionsAdmin {
 						$error = __('Slider not found', 'revslider');
 					}else{
 						if($html !== false){
-							$return = array('data' => $html, 'waiting' => array(), 'toload' => array());
+							$htmlid = $slider->get_html_id();
+							$return = array('data' => $html, 'waiting' => array(), 'toload' => array(), 'htmlid' => $htmlid);
 							$return = apply_filters('revslider_get_slider_html_addition', $return, $slider);
 							$this->ajax_response_data($return);
 						}else{

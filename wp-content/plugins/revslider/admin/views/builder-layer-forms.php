@@ -461,7 +461,7 @@ if(!defined('ABSPATH')) exit();
 						</div>
 					</row>
 
-					<div class="_nsfc_ _nsfr_ _nsft_ _nsfa_ _nsfb_ _nsfsvg_">
+					<div class="_nsfc_ _nsfr_ _nsft_ _nsfa_ _nsfb_ _nsfsvg_ _nsftbsic_">
 						<label_a><?php _e('Size Presets', 'revslider');?></label_a><select id="layer_covermode" data-enable=".layersize_wrap " data-disable=".layersize_*val*" class="layerinput tos2 nosearchbox easyinit callEvent" data-updateviaevt="true" data-evt="layerSizePreset" data-r="size.covermode"><option value="custom" selected="selected"><?php _e('Custom Size', 'revslider');?></option><option value="fullwidth"><?php _e('Full Width', 'revslider');?></option><option value="fullheight"><?php _e('Full Height', 'revslider');?></option><option value="cover"><?php _e('Stretch', 'revslider');?></option><option value="cover-proportional"><?php _e('Cover', 'revslider');?></option></select>
 					</div>
 					<div class="_nflic_ _nvojcm_">

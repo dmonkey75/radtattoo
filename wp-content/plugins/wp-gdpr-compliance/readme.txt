@@ -1,16 +1,20 @@
 === WP GDPR Compliance ===
-Contributors: van-ons
+Contributors: cookieinformation
 Tags: gdpr, law, regulations, compliance, data, protection, privacy, data protection, eu, avg, comments, woocommerce, wc, contact form 7, cf7
 Requires at least: 4.5
-Tested up to: 5.7
-Requires PHP: 5.3
-Stable tag: 1.5.6
+Tested up to: 5.8
+Requires PHP: 7.0
+Stable tag: 1.5.9
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 This plugin assists website owners to comply with European privacy regulations (GDPR).
 
 == Description ==
+
+NEWS! Over the following months, we will provide a series of free upgrades to this plugin and even start offering premium features targeted to business users. Planned features include cookie scanning, language support for 40+ languages, and much more. To enable this, we are happy to announce that WP GDPR Compliance has been acquired by the leading Consent Management Platform, [Cookie Information](https://cookieinformation.com/?utm_campaign=van-ons-go-premium&utm_source=van-ons-wp&utm_medium=referral), who will lead the future development of the plug-in.
+
+[Upgrade to premium now for 30 days free and without a credit card](https://cookieinformation.com/wpgdpr-premium-cookie-banner/?utm_campaign=van-ons-go-premium&utm_source=van-ons-wp&utm_medium=referral)
 
 This plugin assists website and webshop owners to comply with European privacy regulations known as GDPR. Activating this plugin does not guarantee your site fully complies with GDPR.
 
@@ -43,6 +47,20 @@ You'll find answers to many of your questions on [https://www.wpgdprc.com/faq/](
 4. Control the link to your privacy policy, activate the request user data page and more.
 
 == Changelog ==
+
+= 1.5.9 =
+*Release date: August 17th, 2021*
+* Bugfix: Multisite settings pages from other plugins disappeared or appeared when they shouldn't
+
+= 1.5.8 =
+*Release date: August 13th, 2021*
+* Restart FTS again link
+* Fix FTS notice dismissal on non-plugin page
+
+= 1.5.7 =
+*Release date: August 12th, 2021*
+* Added first time setup wizard.
+* Added upgrade to Cookie Information.
 
 = 1.5.6 =
 *Release date: February 15th, 2021*

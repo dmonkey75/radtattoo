@@ -13,6 +13,9 @@ class Action {
     /** @var null */
     private static $instance = null;
 
+    /**
+     * Handle success and deletion requests.
+     */
     public function handleRedirects() {
         global $pagenow;
         if ($pagenow === 'tools.php' && isset($_REQUEST['page']) && $_REQUEST['page'] === str_replace('-', '_', WP_GDPR_C_SLUG)) {
@@ -80,6 +83,9 @@ class Action {
         return $query;
     }
 
+    /**
+     * Process all the access requests.
+     */
     public function processEnableAccessRequest() {
         $enabled = Helper::isEnabled('enable_access_request', 'settings');
         if ($enabled) {
@@ -103,6 +109,9 @@ class Action {
         }
     }
 
+    /**
+     * Enable the access request page.
+     */
     public function processToggleAccessRequest() {
         $page = Helper::getAccessRequestPage();
         if (!empty($page)) {
@@ -115,6 +124,9 @@ class Action {
         }
     }
 
+    /**
+     * show the status notices.
+     */
     public function showNoticesRequestUserData() {
         $enabled = Helper::isEnabled('enable_access_request', 'settings');
         if ($enabled) {
@@ -137,6 +149,9 @@ class Action {
         }
     }
 
+    /**
+     * show the consent bar when visiting the site.
+     */
     public function addConsentBar() {
     	$consentRequiredStatus = Action::checkAllConsentsRequired();
 	    $consentBarColor = get_option(WP_GDPR_C_PREFIX . '_settings_consents_bar_color');
@@ -203,6 +218,9 @@ class Action {
 		return sizeof($totalRequiredConsents) === sizeof($totalActiveConsents);
     }
 
+    /**
+     * Add (but do not show) the consent options with the user settings and some explanation.
+     */
     public function addConsentModal() {
     	$consentRequiredStatus = Action::checkAllConsentsRequired();
 	    $consentModalButtonColor = get_option(WP_GDPR_C_PREFIX . '_settings_consents_bar_button_color_primary');
@@ -299,6 +317,9 @@ class Action {
         echo $output;
     }
 
+    /**
+     * Add fields to the form plugins forms such as Gform and CF7
+     */
     public function addTagsToFields() {
         // Contact Form 7
         if (Helper::isEnabled(CF7::ID)) {
@@ -316,6 +337,9 @@ class Action {
         }
     }
 
+    /**
+     * Remove the earlier added fields form the forms.
+     */
     public function removeTagsFromFields() {
         // Contact Form 7
         if (Helper::isEnabled(CF7::ID)) {

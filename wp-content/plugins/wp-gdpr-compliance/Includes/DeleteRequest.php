@@ -138,6 +138,9 @@ class DeleteRequest {
         $this->setDateCreated($row->date_created);
     }
 
+    /**
+     * Load all the requests one by one.
+     */
     public function load() {
         global $wpdb;
         $query = "SELECT * FROM `" . self::getDatabaseTableName() . "` WHERE `ID` = %d";
@@ -249,6 +252,10 @@ class DeleteRequest {
         return $output;
     }
 
+    /**
+     * Check if the request has already been anonymized
+     * @return bool
+     */
     public function isAnonymised() {
         return ($this->getIpAddress() === '127.0.0.1');
     }

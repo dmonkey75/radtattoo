@@ -63,6 +63,9 @@ class WooCommerceOrder {
         }
     }
 
+    /**
+     * set all the needed fields
+     */
     public function load() {
         $this->setBillingEmailAddress(get_post_meta($this->getOrderId(), '_billing_email', true));
         $this->setBillingFirstName(get_post_meta($this->getOrderId(), '_billing_first_name', true));

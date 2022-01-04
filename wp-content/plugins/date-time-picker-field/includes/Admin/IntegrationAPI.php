@@ -199,6 +199,11 @@ if ( ! class_exists( 'IntegrationAPI' ) ) {
 								<input id="class_to_be_copied" type="text" name="integration[selector]" class="regular-text" value="<?php echo ( !empty($manual_data['selector']) ? esc_attr($manual_data['selector']) : '' ); ?>"/>
 								<a href="javascript:void(0);" id="copy-trigger" class="button" style="padding-left: 10px; margin-left: 10px;"><?php _e( 'Copy', 'date-time-picker-field-pro' ); ?></a>
 							</div>
+							<div class="mt-10 description-text">
+								<p class="mt-0 error-color">
+									<?php _e('<strong>ATTENTION!</strong> If you want to integrate with Divi, please remove the “.” (dot) before the code.', 'date-time-picker-field') ?>
+								</p>
+							</div>
 						</div>
 					</div>
 					<div class="field-group-wrap">
@@ -252,6 +257,7 @@ if ( ! class_exists( 'IntegrationAPI' ) ) {
 	      .dtpkr-wrap, .metabox-holder, .metabox-holder-form {border-radius: 8px; }
 	      /**.advertisement-wrap { border-radius: 0px 0px 8px 8px; }*/
 	      .top-heading {font-weight: bold;}
+		  .description-text .error-color {color: #757575;}
 	    </style>
 	    <?php
 	  }
